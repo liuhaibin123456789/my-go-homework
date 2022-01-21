@@ -23,6 +23,7 @@ func main() {
 	defer file.Close()
 	reader := bufio.NewReader(file)
 	readLine:=make([]byte,1024)
+	//循环抽取行数据
 	for true {
 		readLine, _, err = reader.ReadLine()
 		if err != nil {
